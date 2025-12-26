@@ -1471,9 +1471,10 @@ body.menu-open {
 
 .game_box .ad_box .ad > div {
     width: 100% !important;
-    max-width: 100%;
+    max-width: 480px;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .game_box .ad_box .ad p {
@@ -1488,7 +1489,14 @@ body.menu-open {
     }
     
     .game_box .ad_box .ad > div {
-        max-width: 320px;
+        max-width: 100%;
+    }
+    
+    .game_box .ad_box .ad > div .adsbygoogle {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 250px;
     }
     
     /* Inter Ads Responsive */
