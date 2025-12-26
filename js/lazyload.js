@@ -26,8 +26,8 @@
     "use strict";
 
     // Fix mirrored image URLs for local development / mirrored copies.
-    // HTTrack saved some external assets like `https://img.civilitythegame.com/...`
-    // as relative paths such as `../../img.civilitythegame.com/...`, which do not
+    // HTTrack saved some external assets like `https://img.khadyasuraksha.com/...`
+    // as relative paths such as `../../img.khadyasuraksha.com/...`, which do not
     // exist in the local file structure. This normalizes those back to absolute
     // URLs so images load correctly on all game detail pages.
     (function () {
@@ -35,8 +35,8 @@
             return;
         }
 
-        var brokenPrefix = "../../img.civilitythegame.com/";
-        var fixedPrefix = "https://img.civilitythegame.com/";
+        var brokenPrefix = "../../img.khadyasuraksha.com/";
+        var fixedPrefix = "https://img.khadyasuraksha.com/";
 
         function fixAttribute(element, attrName) {
             var value = element.getAttribute(attrName);
