@@ -781,4 +781,741 @@ footer .container a:hover {
     color: #999;
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Responsive Design - Mobile First Approach */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .section {
+        width: calc(100% - 224px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .main {
+        flex-direction: column;
+    }
+    
+    .aside {
+        position: fixed;
+        left: -200px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .aside.active {
+        left: 0;
+    }
+    
+    .section {
+        margin-left: 0;
+        width: 100%;
+        padding: 60px 10px 20px;
+    }
+    
+    .aside .header .search_box {
+        width: calc(100% - 30px);
+        margin: 0 15px 13px;
+    }
+    
+    .box_one {
+        justify-content: space-between;
+    }
+    
+    .box_one a {
+        width: calc(50% - 10px);
+        height: auto;
+        margin: 10px 5px 0;
+        min-width: 0;
+    }
+    
+    .box_one a:nth-child(6n) {
+        margin-right: 5px;
+    }
+    
+    .box_one a:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    .box_one a .img,
+    .box_one a .content_info {
+        width: 100%;
+    }
+    
+    .box_one a .img {
+        height: auto;
+        padding-bottom: 100%;
+        position: relative;
+    }
+    
+    .box_one a .img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .box_one a .content_info {
+        height: auto;
+        padding: 8px 5px;
+    }
+    
+    .box_one a .content_info p {
+        font-size: 12px;
+    }
+    
+    .box_two {
+        flex-direction: column;
+    }
+    
+    .box_two a {
+        width: 100%;
+        margin: 10px 0 0;
+        max-width: 100%;
+    }
+    
+    .box_two a:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    .box_two a:nth-child(-n + 4) {
+        margin-top: 10px;
+    }
+    
+    .box_two a:first-child {
+        margin-top: 0;
+    }
+    
+    .box_two a .text {
+        width: calc(100% - 93px);
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .gri a {
+        width: 100%;
+        height: auto;
+    }
+    
+    .gri a .img {
+        width: 100%;
+        padding-bottom: 100%;
+        position: relative;
+        height: 0;
+    }
+    
+    .gri a .img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gri a .content_info {
+        width: 100%;
+    }
+    
+    .gri .ad {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+    
+    .promotion {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .promotion a {
+        width: 100%;
+        height: auto;
+    }
+    
+    .promotion a .thum {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    
+    .promotion a:nth-child(10),
+    .promotion a:nth-child(11),
+    .promotion a:nth-child(12),
+    .promotion a:nth-child(17),
+    .promotion a:nth-child(20),
+    .promotion a:nth-child(29),
+    .promotion a:nth-child(27),
+    .promotion a:nth-child(28) {
+        width: 100%;
+        height: auto;
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+    
+    .promotion a:nth-child(10) .thum,
+    .promotion a:nth-child(11) .thum,
+    .promotion a:nth-child(12) .thum,
+    .promotion a:nth-child(17) .thum,
+    .promotion a:nth-child(20) .thum,
+    .promotion a:nth-child(29) .thum,
+    .promotion a:nth-child(27) .thum,
+    .promotion a:nth-child(28) .thum {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    
+    .promotion a:nth-child(10) p,
+    .promotion a:nth-child(11) p,
+    .promotion a:nth-child(12) p,
+    .promotion a:nth-child(17) p,
+    .promotion a:nth-child(20) p,
+    .promotion a:nth-child(29) p,
+    .promotion a:nth-child(27) p,
+    .promotion a:nth-child(28) p {
+        width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    
+    .game_box {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .game_box .game {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .game_box .ad_box {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+    }
+    
+    .game_box .game .mm_t {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .game_box .game .mm_t .img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 15px;
+    }
+    
+    .game_box .game .mm_t .ml_t {
+        width: 100%;
+        height: auto;
+    }
+    
+    .game_box .game .mm_t .ml_t h3 {
+        width: 100%;
+        font-size: 18px;
+        white-space: normal;
+        height: auto;
+        margin: 0 0 15px;
+    }
+    
+    .game_box .game .mm_t .ml_t .g_a_link {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .game_box .game .mm_t .ml_t .g_a_link .buttons {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .game_box .game .mm_t .ml_t .g_a_link .rating-bar {
+        width: 100%;
+    }
+    
+    .game_box .game .mm_t .ml_t .g_a_link .rating-bar .article {
+        width: 100%;
+    }
+    
+    .game_box .game .game_details {
+        position: relative;
+    }
+    
+    .game_box .game .game_details .buttons {
+        position: relative;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .game_box .game .game_details .buttons span {
+        min-width: 80px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    
+    .game_box .game .game_details .details_box {
+        padding: 15px;
+    }
+    
+    .game_box .game .game_details .details_box ul li {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    
+    .game_box .game .game_details .details_box ul li h3 {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .game_box .game .game_details .details_box ul li p {
+        width: 100%;
+        padding-left: 0;
+        white-space: normal;
+        height: auto;
+    }
+    
+    .seeding_box {
+        padding: 15px;
+    }
+    
+    .seeding_box .seeding {
+        width: 100%;
+        height: auto;
+    }
+    
+    .seeding_box .seeding img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .get_app_box {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .get_app_box a {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 0 15px;
+    }
+    
+    .get_app_box a:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+    
+    .s_box {
+        margin-bottom: 20px;
+    }
+    
+    .title {
+        font-size: 18px;
+        padding-left: 15px;
+        height: auto;
+        line-height: 1.5;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .small_box hr {
+        width: calc(100% - 30px);
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    header .container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+    
+    header .container .logo_img {
+        position: relative;
+        height: auto;
+    }
+    
+    header .container nav {
+        width: 100%;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header .container nav a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+    
+    footer .container a {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    footer .container a:nth-last-child(1) {
+        border-bottom: none;
+    }
+    
+    .navigation {
+        padding: 15px 10px;
+        height: auto;
+        font-size: 12px;
+    }
+    
+    .sousuo_box {
+        padding: 15px;
+    }
+    
+    .sousuo_box a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .box_three {
+        padding: 15px;
+    }
+    
+    .box_three h3 {
+        font-size: 14px;
+    }
+    
+    .box_three .dec p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .promotion_box {
+        padding: 10px;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    .section {
+        padding: 60px 5px 20px;
+    }
+    
+    .box_one a {
+        width: calc(50% - 5px);
+        margin: 8px 2.5px 0;
+    }
+    
+    .box_one a .content_info p {
+        font-size: 11px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+    
+    .promotion {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .title {
+        font-size: 16px;
+        padding: 12px 10px;
+    }
+    
+    .game_box .game .mm_t .ml_t h3 {
+        font-size: 16px;
+    }
+    
+    .nav ul li a,
+    .small_box ul li a {
+        height: 40px;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .nav ul li a i,
+    .small_box ul li a i {
+        font-size: 16px;
+    }
+    
+    .aside .header .logo {
+        margin: 10px 0 20px;
+        height: 28px;
+    }
+    
+    .mobile-menu-toggle {
+        top: 10px;
+        left: 10px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 14px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 11px;
+    }
+}
+
+/* Overlay for mobile menu */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mobile-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* AdSense Responsive Styles */
+.ads-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ads-container.vertical {
+    flex-direction: column;
+}
+
+.ads-container.horizontal {
+    flex-direction: row;
+}
+
+.ads-container .ad-label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.adsbygoogle {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100px;
+}
+
+/* Responsive Ad Sizes */
+@media screen and (min-width: 769px) {
+    .ads-container.vertical {
+        max-width: 300px;
+    }
+    
+    .ads-container.vertical .adsbygoogle {
+        min-height: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ads-container {
+        margin: 15px 0;
+        padding: 8px;
+    }
+    
+    .ads-container.vertical {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ads-container.vertical .adsbygoogle {
+        min-height: 480px;
+    }
+    
+    .ads-container.horizontal {
+        max-width: 100%;
+    }
+    
+    .ads-container.horizontal .adsbygoogle {
+        min-height: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ads-container {
+        margin: 10px 0;
+        padding: 5px;
+    }
+    
+    .ads-container.vertical {
+        max-width: 100%;
+    }
+    
+    .ads-container.vertical .adsbygoogle,
+    .ads-container.horizontal .adsbygoogle {
+        min-height: 250px;
+    }
+}
+
+/* Game Box Ad Styling */
+.game_box .ad_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.game_box .ad_box .ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.game_box .ad_box .ad > div {
+    width: 100% !important;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.game_box .ad_box .ad p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .game_box .ad_box {
+        margin-top: 10px;
+    }
+    
+    .game_box .ad_box .ad > div {
+        max-width: 320px;
+    }
+    
+    /* Inter Ads Responsive */
+    .ads-container.horizontal .adsbygoogle[style*="468px"],
+    .ads-container.horizontal .adsbygoogle[style*="480px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 60px;
+    }
+    
+    .ads-container.vertical .adsbygoogle[style*="320px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ads-container.horizontal .adsbygoogle[style*="468px"],
+    .ads-container.horizontal .adsbygoogle[style*="480px"] {
+        min-height: 50px;
+    }
+    
+    .ads-container.vertical .adsbygoogle[style*="320px"] {
+        min-height: 200px;
+    }
+}
 
