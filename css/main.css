@@ -1471,10 +1471,15 @@ body.menu-open {
 
 .game_box .ad_box .ad > div {
     width: 100% !important;
-    max-width: 480px;
+    max-width: 300px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+}
+
+.game_box .ad_box .ad > div .adsbygoogle {
+    width: 300px !important;
+    height: 600px !important;
 }
 
 .game_box .ad_box .ad p {
@@ -1494,9 +1499,19 @@ body.menu-open {
     
     .game_box .ad_box .ad > div .adsbygoogle {
         width: 100% !important;
+        max-width: 320px !important;
+        height: 480px !important;
+        margin: 0 auto;
+    }
+    
+    .public_box[style*="margin-bottom: 15px"] {
+        margin-bottom: 15px !important;
+    }
+    
+    .public_box[style*="margin-bottom: 15px"] .adsbygoogle {
+        width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
-        min-height: 250px;
+        height: 60px !important;
     }
     
     /* Inter Ads Responsive */
