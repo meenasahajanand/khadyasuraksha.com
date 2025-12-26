@@ -155,6 +155,9 @@ button {
 }
 .section .s_box {
     margin-bottom: 15px;
+    background: #fff;
+    border-radius: 23px;
+    padding: 10px;
 }
 .section .title {
     font-size: 16px;
@@ -342,9 +345,12 @@ button {
     margin-right: 15px;
 }
 .game_box .ad_box {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .game_box .game .mm_t {
     display: flex;
@@ -1452,34 +1458,14 @@ body.menu-open {
     }
 }
 
-/* Game Box Ad Styling */
-.game_box .ad_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 15px;
-}
-
+/* Second Display Ad - Vertical (300x600) in game_box - Additional styling */
 .game_box .ad_box .ad {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-}
-
-.game_box .ad_box .ad > div {
-    width: 100% !important;
     max-width: 300px;
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
-}
-
-.game_box .ad_box .ad > div .adsbygoogle {
-    width: 300px !important;
-    height: 600px !important;
 }
 
 .game_box .ad_box .ad p {
@@ -1504,14 +1490,11 @@ body.menu-open {
         margin: 0 auto;
     }
     
-    .public_box[style*="margin-bottom: 15px"] {
-        margin-bottom: 15px !important;
-    }
-    
-    .public_box[style*="margin-bottom: 15px"] .adsbygoogle {
+    .s_box .adsbygoogle {
         width: 100% !important;
         max-width: 100% !important;
-        height: 60px !important;
+        height: auto !important;
+        min-height: 60px;
     }
     
     /* Inter Ads Responsive */
