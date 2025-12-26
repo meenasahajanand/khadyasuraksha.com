@@ -345,12 +345,10 @@ button {
     margin-right: 15px;
 }
 .game_box .ad_box {
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 300px;
 }
 .game_box .game .mm_t {
     display: flex;
@@ -1059,8 +1057,9 @@ footer .container a:hover {
     .game_box .ad_box {
         position: relative;
         right: auto;
-        bottom: auto;
+        top: auto;
         width: 100%;
+        margin-top: 20px;
     }
     
     .game_box .game .mm_t {
