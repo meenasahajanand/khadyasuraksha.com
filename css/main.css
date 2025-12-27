@@ -1401,11 +1401,9 @@ body.menu-open {
     text-align: center;
 }
 
+/* Base adsbygoogle - Don't override inline styles */
 .adsbygoogle {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 100px;
+    min-height: 50px;
 }
 
 /* Override for grid ad - keep fixed size */
