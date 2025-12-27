@@ -349,6 +349,9 @@ button {
     right: 20px;
     top: 15px;
     width: 300px;
+    z-index: 10;
+    visibility: visible;
+    display: block;
 }
 .game_box .game .mm_t {
     display: flex;
@@ -1405,6 +1408,15 @@ body.menu-open {
     min-height: 100px;
 }
 
+/* Override for grid ad - keep fixed size */
+.gri .ad .adsbygoogle {
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+}
+
 /* Responsive Ad Sizes */
 @media screen and (min-width: 769px) {
     .ads-container.vertical {
@@ -1473,6 +1485,31 @@ body.menu-open {
     margin-top: 5px;
 }
 
+/* Grid Ad Desktop - Force height 280px */
+.gri .ad > div {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 280px !important;
+    overflow: hidden !important;
+}
+
+.gri .ad > div .adsbygoogle {
+    width: 300px !important;
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    display: block !important;
+}
+
+.gri .ad > div iframe,
+.gri .ad > div > ins > iframe {
+    width: 300px !important;
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    display: block !important;
+}
+
 @media screen and (max-width: 768px) {
     .game_box .ad_box {
         margin-top: 10px;
@@ -1486,6 +1523,27 @@ body.menu-open {
         width: 100% !important;
         max-width: 320px !important;
         height: 480px !important;
+        margin: 0 auto;
+    }
+    
+    /* Second Vertical Ad in s_box - Mobile Responsive */
+    .s_box .adsbygoogle[style*="300px"][style*="600px"] {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 480px !important;
+    }
+    
+    /* Grid Ad Responsive */
+    .gri .ad > div {
+        max-width: 100% !important;
+    }
+    
+    .gri .ad > div .adsbygoogle {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: 280px !important;
+        min-height: 280px !important;
+        max-height: 280px !important;
         margin: 0 auto;
     }
     
